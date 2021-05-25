@@ -1,17 +1,25 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
+.tempSnakeMenuList * {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+
 * {
     padding: 0px;
     margin:0px;
     box-sizing: border-box;
 }
 
-body {
+.bannerimg {
     background-image: url("../assets/images/VanRoey-Private-Cloud.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 10vh;
 }
+
 .fa-home {
     color: white;
 }
