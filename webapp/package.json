@@ -20,5 +20,8 @@
     "gulp-real-favicon": "^0.3.2",
     "gulp-sourcemaps": "^3.0.0",
     "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
   }
 }
