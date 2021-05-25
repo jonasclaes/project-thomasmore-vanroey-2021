@@ -1,6 +1,6 @@
 # Project - Main file
 import logging
-from modules.example import ExampleModule
+from modules.general import General
 
 
 def run_app():
@@ -19,8 +19,16 @@ def run_app():
 
     logging.info("Starting software...")
 
-    # Do stuff here.
-    example_module = ExampleModule()     # Initialize a new instance of example modules
+    hardware = None
+    if General.is_raspberrypi():
+        logging.debug("System is a Raspberry Pi.")
+
+        # Only import it here.
+        # If you import it earlier, it will fail because the Adafruit libraries
+        from modules.hardware import Hardware
+        hardware = Hardware()
+    else:
+        logging.debug("System is a PC.")
 
     logging.info("Software started.")
 

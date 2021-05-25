@@ -1,1 +1,3 @@
+# Program requirements
+adafruit-blinka
 adafruit-circuitpython-mpr121
