@@ -1,0 +1,25 @@
+body {
+    overflow-x: hidden;
+}
+
+.bannerimg {
+    position: relative;
+    right: 30%;
+    clip-path: polygon(100% 0, 100% 5%, 50% 15%, 0 5%, 0 0);
+}
+
+.content {
+    display: flex;
+    position: absolute;
+    bottom: 25%;
+}
+
+.content div {
+    padding-left: 20px;
+}
+
+h2  {
+    border-right: #287abe solid 2px;
+    padding-right: 20px;
+    text-align: right;
+}
