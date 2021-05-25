@@ -1,0 +1,18 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+body {
+    background-image: url("../assets/images/VanRoey-Private-Cloud.jpg");
+
+    background-size:cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+}
+
+main {
+    height: 90vh;
+}
+
+
+h1  {
+
+}
