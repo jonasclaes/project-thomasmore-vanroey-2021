@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "watch": "gulp",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "@lipemat/css-mqpacker": "^8.0.1",
+    "bootstrap": "^4.6.0",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minifier": "^3.5.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-real-favicon": "^0.3.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "prettier": "^2.2.1"
+  }
+}
