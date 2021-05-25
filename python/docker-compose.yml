@@ -1,0 +1,20 @@
+version: '3'
+services:
+  web:
+    build: ./web
+    restart: on-failure
+    networks:
+      - internal
+
+  nginx:
+    build: ./nginx
+    restart: on-failure
+    ports:
+      - "8080:80"
+    depends_on:
+      - web
+    networks:
+      - internal
+
+networks:
+  internal:
