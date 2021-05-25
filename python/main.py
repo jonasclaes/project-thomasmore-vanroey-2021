@@ -20,11 +20,12 @@ def run_app():
     logging.info("Starting software...")
 
     hardware = None
+    # Check if the system is a Raspberry Pi.
     if General.is_raspberrypi():
         logging.debug("System is a Raspberry Pi.")
 
         # Only import it here.
-        # If you import it earlier, it will fail because the Adafruit libraries
+        # If you import it earlier, it will fail because the Adafruit libraries.
         from modules.hardware import Hardware
         hardware = Hardware()
     else:
