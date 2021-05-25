@@ -21,4 +21,4 @@ class Hardware:
         logging.info("Initialized hardware.")
 
     def get_capacitive_input(self, input_number: int):
-        return self._mpr121[input_number]
+        return self._mpr121[input_number].value

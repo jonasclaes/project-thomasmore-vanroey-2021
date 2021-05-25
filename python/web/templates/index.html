@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Index</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket = io();
+        socket.on('connect', function() {
+            socket.emit('my event', {data: 'I\'m connected!'});
+        });
+
+        socket.on('message', function (data) {
+            console.log("Message!")
+            console.log(data)
+
+            if ("window" in data) {
+                switch (data.window) {
+                    case 0:
+                        // console.log("Index")
+                        location.href = "/"
+                        break
+
+                    case 1:
+                        // console.log("Pagina 1")
+                        location.href = "/pagina1"
+                        break
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,4 +1,7 @@
 # Program requirements
 adafruit-blinka
 adafruit-circuitpython-mpr121
-Flask
+python-socketio[client]
+python-engineio
+websocket-client
+requests

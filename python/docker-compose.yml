@@ -3,6 +3,8 @@ services:
   web:
     build: ./web
     restart: on-failure
+    ports:
+      - "8081:8080"
     networks:
       - internal
 

@@ -1,3 +1,5 @@
 # Program requirements
-gunicorn
+gunicorn==20.1.0
 Flask
+eventlet==0.30.2
+flask-socketio
