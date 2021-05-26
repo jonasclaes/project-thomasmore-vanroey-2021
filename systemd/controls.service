@@ -1,0 +1,15 @@
+[Unit]
+Description=Touch surfaces service
+Wants=network-online.target
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/python3 /opt/project/python/application/main.py
+WorkingDirectory=/opt/project/python/application
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

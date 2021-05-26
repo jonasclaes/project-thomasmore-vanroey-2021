@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn webserver service
+Wants=network-online.target
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/python3 -m gunicorn app:app
+WorkingDirectory=/opt/project/python/web
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
