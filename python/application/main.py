@@ -35,8 +35,7 @@ def run_app():
     else:
         logging.debug("System is a PC.")
 
-    logging.info("Software started.")
-
+    logging.info("Initializing WebSocket...")
     sio = socketio.Client(
         reconnection=True,
         reconnection_attempts=float('Inf'),
@@ -48,6 +47,7 @@ def run_app():
     )
 
     sio.connect(url="http://localhost:8080")
+    logging.info("WebSocket connected.")
 
     @sio.event
     def message(data):
@@ -66,13 +66,21 @@ def run_app():
     def disconnect():
         print("I'm disconnected!")
 
+    logging.info("Software started.")
+
+    if hardware is not None:
+        hardware._mpr121[1].threshold = 6
+
     while True:
-        sio.emit("change window", {'window': 0})
-        time.sleep(1)
-        # print("Working...")
-        sio.emit("change window", {'window': 1})
-        time.sleep(1)
-        # print("Working...")
+        for i in range(0, 12):
+            if hardware is not None:
+                if hardware.get_capacitive_input(i):
+                    print("Change to window " + str(i))
+                    sio.emit("change window", {'window': i})
+            else:
+                print("Change to window " + str(i))
+                sio.emit("change window", {'window': i})
+                time.sleep(1)
 
 
 if __name__ == '__main__':
