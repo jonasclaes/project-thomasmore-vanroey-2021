@@ -18,17 +18,7 @@
             console.log(data)
 
             if ("window" in data) {
-                switch (data.window) {
-                    case 0:
-                        // console.log("Index")
-                        location.href = "/"
-                        break
-
-                    case 1:
-                        // console.log("Pagina 1")
-                        location.href = "/pagina1"
-                        break
-                }
+                location.href = "/pagina" + (data.window + 1);
             }
         });
     </script>

@@ -1,10 +1,12 @@
 import io
 import os
+import logging
 
 
 class General:
     @staticmethod
     def is_raspberrypi():
+        logging.debug('System is running on: ' + str(os.name))
         if os.name != "posix":
             return False
 
@@ -17,12 +19,17 @@ class General:
                         label, value = line.strip().split(':', 1)
                         value = value.strip()
 
+                        logging.debug("System chip is a: " + value)
+
                         if value not in (
                             'BCM2708',
                             'BCM2709',
                             'BCM2835',
-                            'BCM2836'
+                            'BCM2836',
+                            'BCM2711'
                         ):
                             return False
+                        else:
+                            return True
         except IOError:
             raise ValueError('Unable to open `/proc/cpuinfo`.')
