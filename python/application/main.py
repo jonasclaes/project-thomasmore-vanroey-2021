@@ -77,6 +77,7 @@ def run_app():
                 if hardware.get_capacitive_input(i):
                     print("Change to window " + str(i))
                     sio.emit("change window", {'window': i})
+                time.sleep(0.1)
             else:
                 print("Change to window " + str(i))
                 sio.emit("change window", {'window': i})
