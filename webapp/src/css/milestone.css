@@ -1,25 +1,69 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .bannerimg {
     position: relative;
-    right: 30%;
-    clip-path: polygon(100% 0, 100% 5%, 50% 15%, 0 5%, 0 0);
+    max-width: 100vw;
+    clip-path: polygon(100% 0, 100% 40%, 50% 100%, 0 40%, 0 0);
+
+}
+
+.bannerimg img {
+    position: relative;
+    top: 100px;
 }
 
 .content {
     display: flex;
     position: absolute;
     bottom: 25%;
+    text-align: justify;
 }
 
 .content div {
     padding-left: 20px;
+
+}
+
+.fa-home {
+    color: #287abe;
 }
 
 h2  {
-    border-right: #287abe solid 2px;
+    border-bottom: #287abe solid 2px;
+    border-right: none;
     padding-right: 20px;
-    text-align: right;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+footer {
+    background: linear-gradient(90deg, rgba(1,62,142,1) 0%, rgba(2,78,153,1) 50%, rgba(1,46,113,1) 1000%);
+    z-index:1;
+    height:28px;
+    width:100%;
+    padding-bottom: 4.5px;
+}
+footer div {
+    color: #eee;
+}
+footer a{
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    h2 {
+        text-align: right;
+        border-bottom: none;
+        border-right: solid 2px #287abe;
+        padding-right: 1.4vw;
+    }
+
 }
