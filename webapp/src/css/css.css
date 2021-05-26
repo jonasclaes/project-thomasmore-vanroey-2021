@@ -1,11 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
-.tempSnakeMenuList * {
-    list-style-type: none;
-    text-decoration: none;
-}
-
-
 
 * {
     padding: 0px;
@@ -13,19 +7,44 @@
     box-sizing: border-box;
 }
 
+
 .bannerimg {
-    background-image: url("../assets/images/VanRoey-Private-Cloud.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    height: 10vh;
+    position: relative;
+    max-width: 100vw;
+    clip-path: polygon(100% 0, 100% 40%, 50% 100%, 0 40%, 0 0);
+
+}
+
+.bannerimg img {
+    position: relative;
+    top: 100px;
+}
+
+svg {
+    transform: rotate(90deg);
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+
+a {
+    transition: all 1s;
+    transform-origin: 50% 50%;
 }
 
 .fa-home {
-    color: white;
+    color: #287abe;
 }
+
+#Default {
+    max-height: 50vh;
+    width: auto;
+}
+
 @media screen and (min-width: 576px) {
 body{
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 }
 
@@ -40,17 +59,24 @@ main {
 
 nav {
     background-color: rgba(255,255,255,0.5);
-
 }
 
 footer {
-    /*height: 20px;*/
-    /*display:flex;*/
-    /*align-items:center;*/
-    color: #384349;
-    background-color: rgba(255,255,255,0.5);
+    background: linear-gradient(90deg, rgba(1,62,142,1) 0%, rgba(2,78,153,1) 50%, rgba(1,46,113,1) 1000%);
+    /*z-index:1;*/
+    height:28px;
+    width:100%;
+    padding-bottom: 4.5px;
+}
+
+footer div {
+    color: #eee;
 }
 footer a {
-    color: #287abe;
-    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 576px){
+
 }
