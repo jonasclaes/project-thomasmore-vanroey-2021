@@ -1,12 +1,14 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
-
 * {
     padding: 0px;
     margin:0px;
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;
+}
 
 .bannerimg {
     position: relative;
@@ -24,17 +26,26 @@ svg {
     transform: rotate(90deg);
 }
 
+svg path:hover {
+    fill: rgba(40,122,190, .75);
+}
+
 a:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
 }
 
 a {
-    transition: all 1s;
+    transition: all 0.1s;
     transform-origin: 50% 50%;
 }
 
 .fa-home {
     color: #287abe;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 #Default {
@@ -43,9 +54,9 @@ a {
 }
 
 @media screen and (min-width: 576px) {
-body{
-    /*overflow: hidden;*/
-}
+    svg {
+        transform: rotate(0deg);
+    }
 }
 
 h1 {
@@ -63,7 +74,6 @@ nav {
 
 footer {
     background: linear-gradient(90deg, rgba(1,62,142,1) 0%, rgba(2,78,153,1) 50%, rgba(1,46,113,1) 1000%);
-    /*z-index:1;*/
     height:28px;
     width:100%;
     padding-bottom: 4.5px;
@@ -77,6 +87,8 @@ footer a {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 576px){
+/*@media screen and (max-width: 576px){*/
 
-}
+/*}*/
+
+
