@@ -26,6 +26,7 @@ class General:
                             'BCM2709',
                             'BCM2835',
                             'BCM2836',
+                            'BCM2837',
                             'BCM2711'
                         ):
                             return False
