@@ -18,7 +18,7 @@
             console.log(data)
 
             if ("window" in data) {
-                location.href = "/pagina" + data.window;
+                location.href = "/pagina" + (data.window + 1);
             }
         });
     </script>
