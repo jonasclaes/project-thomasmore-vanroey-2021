@@ -6,6 +6,7 @@ import time
 from modules.general import General
 import socketio
 
+currentPage = 14
 
 def run_app():
     # Log format according to ISO8601.
@@ -76,7 +77,10 @@ def run_app():
             if hardware is not None:
                 if hardware.get_capacitive_input(i):
                     print("Change to window " + str(i))
-                    sio.emit("change window", {'window': i})
+                    if i == currentPage:
+                        sio.emit("change window", {'window': 14})
+                    else:
+                        sio.emit("change window", {'window': i})
                 time.sleep(0.1)
             else:
                 print("Change to window " + str(i))
