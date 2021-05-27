@@ -1,0 +1,19 @@
+body {
+    background-color: #000;
+
+}
+
+svg {
+    filter: blur(2px);
+}
+
+svg path {
+    fill: #fff;
+}
+
+h1 {
+
+    font-weight: bold;
+    line-height: 100vh;
+    color: #287abe;
+}
