@@ -22,10 +22,6 @@ html, body{
     top: 100px;
 }
 
-svg {
-    transform: rotate(90deg);
-}
-
 svg path:hover {
     fill: rgba(40,122,190, .75);
 }
@@ -48,14 +44,19 @@ body{
     overflow-x: hidden;
 }
 
-#Default {
-    max-height: 50vh;
+svg {
+    overflow: visible;
+    max-height: 45vh;
     width: auto;
+}
+#Default {
+    transform: rotate(90deg);
 }
 
 @media screen and (min-width: 576px) {
-    svg {
-        transform: rotate(0deg);
+    #Default {
+        transform: scale(1,-1);
+
     }
 }
 

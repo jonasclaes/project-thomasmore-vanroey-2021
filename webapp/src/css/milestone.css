@@ -1,4 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 
 body {
     overflow-x: hidden;
@@ -29,17 +32,25 @@ body {
     height:auto;
     object-fit: contain;
 }
+#verticalImg{
+    max-height: 50%;
+}
 
 .fa-home {
     color: #287abe;
 }
 
 h2  {
+    font-family: 'Staatliches', sans-serif;
     border-bottom: #287abe solid 2px;
     border-right: none;
     padding-right: 20px;
     padding-bottom: 10px;
     display: inline-block;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 footer {
@@ -89,6 +100,91 @@ footer a{
     }
 }
 
+
+.slide {
+    transition: 2s;
+    font-family: 'Poppins', sans-serif;
+    -webkit-animation: slideFade 2s backwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 1.2s, fadeIn 1.5s ease-out ;
+
+}
+
+@-webkit-keyframes slide {
+    100% {
+        transform: translateX(0);
+    }
+    0% {
+        transform: translateX(-3vh);
+    }
+}
+
+@keyframes slide {
+    100% {
+        transform: translateX(0);}
+    0% {
+        transform: translateX(-3vh);}
+}
+
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.videost{
+    height: auto;
+    width: 34vw
+}
+
+
+
+@media screen and (max-width: 576px){
+    .slide {
+        animation: none;
+    }
+    .videost{
+        height: auto;
+        width: 100vw
+    }
+}
+@media screen and (max-width: 756px){
+    .slide {
+        animation: none;
+    }
+    .videost{
+        height: auto;
+        width: 80vw
+    }
+}
+@media screen and (min-width: 1024px){
+    .slide{
+        font-size: 19px;
+    }
+}
 /*.heading{
     animation: 1s ease-out 0s 1 slideInFromRight;
 }
