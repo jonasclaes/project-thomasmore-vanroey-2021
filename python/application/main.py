@@ -69,19 +69,33 @@ def run_app():
     logging.info("Software started.")
 
     if hardware is not None:
+        # Might not be needed. Just a sensitivity test.
         hardware._mpr121[1].threshold = 6
 
+    current_page = 0
+    sleep_time = (0.1 if General.is_raspberrypi() else 0)
     while True:
         for i in range(0, 12):
             if hardware is not None:
                 if hardware.get_capacitive_input(i):
-                    print("Change to window " + str(i))
-                    sio.emit("change window", {'window': i})
-                time.sleep(0.1)
+                    if i == current_page:
+                        sio.emit("change window", {'window': 13})
+                        current_page = 13
+                    else:
+                        sio.emit("change window", {'window': i})
+                        current_page = i
+
+        if hardware is None:
+            input_number = int(input("Input? [0-11]: "))
+
+            if input_number == current_page:
+                sio.emit("change window", {'window': 13})
+                current_page = 13
             else:
-                print("Change to window " + str(i))
-                sio.emit("change window", {'window': i})
-                time.sleep(1)
+                sio.emit("change window", {'window': input_number})
+                current_page = input_number
+
+        time.sleep(sleep_time)
 
 
 if __name__ == '__main__':

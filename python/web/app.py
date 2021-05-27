@@ -6,7 +6,7 @@ app.config["SECRET_KEY"] = "secret!"
 socketio = SocketIO(app)
 
 
-@app.route("/")
+@app.route("/pagina14")
 def hello_world():
     return render_template("index.html")
 
