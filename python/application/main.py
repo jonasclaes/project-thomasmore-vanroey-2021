@@ -7,7 +7,6 @@ from modules.general import General
 import socketio
 
 
-
 def run_app():
     # Log format according to ISO8601.
     # Example: 2021-05-21T21:37:13+0200
@@ -70,39 +69,33 @@ def run_app():
     logging.info("Software started.")
 
     if hardware is not None:
+        # Might not be needed. Just a sensitivity test.
         hardware._mpr121[1].threshold = 6
 
-    currentPage = int(13)
+    current_page = 0
+    sleep_time = (0.1 if General.is_raspberrypi() else 0)
     while True:
-        
         for i in range(0, 12):
             if hardware is not None:
-                print(currentPage)
-                
                 if hardware.get_capacitive_input(i):
-                    print("Change to window " + str(i))
-                   
-                    if (int(i) == int(currentPage)):
+                    if i == current_page:
                         sio.emit("change window", {'window': 13})
-                        currentPage = 13
-                        print(currentPage)
+                        current_page = 13
                     else:
                         sio.emit("change window", {'window': i})
-                        currentPage = int(i)
-                        print(currentPage)
-                time.sleep(0.05)
+                        current_page = i
+
+        if hardware is None:
+            input_number = int(input("Input? [0-11]: "))
+
+            if input_number == current_page:
+                sio.emit("change window", {'window': 13})
+                current_page = 13
             else:
-                print("Change to window " + str(i))
-                print(currentPage)
-                if (int(i) == int(currentPage)):
-                    sio.emit("change window", {'window': 13})
-                    currentPage = 13
-                    print(currentPage)
-                else:
-                    sio.emit("change window", {'window': i})
-                    currentPage = int(i)
-                    print(currentPage)
-                time.sleep(0.05)
+                sio.emit("change window", {'window': input_number})
+                current_page = input_number
+
+        time.sleep(sleep_time)
 
 
 if __name__ == '__main__':
