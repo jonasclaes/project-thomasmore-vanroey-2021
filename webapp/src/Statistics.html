@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="nl" style="max-width: 100vw">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="css/milestone.css">
     <title>Groeibedrijf</title>
 </head>
@@ -21,6 +21,7 @@
     </nav>
 </header>
 <body>
+
 <table>
     <thead>table head</thead>
     <tr>
@@ -33,8 +34,20 @@
         <td>tall</td>
         <td>short</td>
     </tr>
-
-
 </table>
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-6 offset-lg-1">
+    <canvas id="myChart" width="45vw" height="33vh"></canvas>
+        </div>
+        <div class="col-lg-6 offset-lg-2">
+    <canvas id="doughnut-chart" width="45vw" height="25.2vh"></canvas>
+        </div>
+    </div>
+</div>
+<script src="assets/js/script.js"></script>
+<script src="../assets/js/ScriptPie4.js"></script>
+<script src="../assets/js/ScriptPie2.js"></script>
 </body>
 </html>

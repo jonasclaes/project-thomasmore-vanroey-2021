@@ -46,7 +46,8 @@ body{
 
 svg {
     overflow: visible;
-    max-height: 45vh;
+    /*max-height: 45vh;*/
+    max-height: 30vh;
     width: auto;
 }
 #Default {
