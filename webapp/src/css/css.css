@@ -2,12 +2,13 @@
 
 * {
     padding: 0px;
-    margin:0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     height: 100%;
+    overflow: hidden;
 }
 
 .bannerimg {
@@ -22,13 +23,31 @@ html, body{
     top: 100px;
 }
 
-svg path:hover {
-    fill: rgba(40,122,190, .75);
+/* old svg css*/
+/*svg path:hover {*/
+/*    fill: rgba(40,122,190, .75);*/
+/*}*/
+
+/*a:hover {*/
+/*    transform: scale(1.03);*/
+/*    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));*/
+/*}*/
+
+/*a {*/
+/*    transition: all 0.1s;*/
+/*    transform-origin: 50% 50%;*/
+/*}*/
+svg {
+    overflow: visible;
+}
+
+svg *:hover {
+    fill: rgba(40, 122, 190, .75);
 }
 
 a:hover {
     transform: scale(1.03);
-    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
 
 a {
@@ -40,23 +59,23 @@ a {
     color: #287abe;
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
 svg {
-    overflow: visible;
-    /*max-height: 45vh;*/
-    max-height: 30vh;
+    overflow-y: visible;
+    max-height: 45vh;
     width: auto;
 }
+
 #Default {
     transform: rotate(90deg);
 }
 
 @media screen and (min-width: 576px) {
     #Default {
-        transform: scale(1,-1);
+        transform: scale(1, -1);
 
     }
 }
@@ -71,26 +90,25 @@ main {
 }
 
 nav {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 footer {
-    background: linear-gradient(90deg, rgba(1,62,142,1) 0%, rgba(2,78,153,1) 50%, rgba(1,46,113,1) 1000%);
-    height:28px;
-    width:100%;
+    background: linear-gradient(90deg, rgba(1, 62, 142, 1) 0%, rgba(2, 78, 153, 1) 50%, rgba(1, 46, 113, 1) 1000%);
+    height: 28px;
+    width: 100%;
     padding-bottom: 4.5px;
 }
 
 footer div {
     color: #eee;
 }
+
 footer a {
     color: white;
     text-decoration: underline;
 }
 
-/*@media screen and (max-width: 576px){*/
 
-/*}*/
 
 
