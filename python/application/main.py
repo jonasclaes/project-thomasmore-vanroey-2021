@@ -6,7 +6,7 @@ import time
 from modules.general import General
 import socketio
 
-currentPage = 14
+
 
 def run_app():
     # Log format according to ISO8601.
@@ -72,20 +72,37 @@ def run_app():
     if hardware is not None:
         hardware._mpr121[1].threshold = 6
 
+    currentPage = int(13)
     while True:
+        
         for i in range(0, 12):
             if hardware is not None:
+                print(currentPage)
+                
                 if hardware.get_capacitive_input(i):
                     print("Change to window " + str(i))
-                    if i == currentPage:
-                        sio.emit("change window", {'window': 14})
+                   
+                    if (int(i) == int(currentPage)):
+                        sio.emit("change window", {'window': 13})
+                        currentPage = 13
+                        print(currentPage)
                     else:
                         sio.emit("change window", {'window': i})
-                time.sleep(0.1)
+                        currentPage = int(i)
+                        print(currentPage)
+                time.sleep(0.05)
             else:
                 print("Change to window " + str(i))
-                sio.emit("change window", {'window': i})
-                time.sleep(1)
+                print(currentPage)
+                if (int(i) == int(currentPage)):
+                    sio.emit("change window", {'window': 13})
+                    currentPage = 13
+                    print(currentPage)
+                else:
+                    sio.emit("change window", {'window': i})
+                    currentPage = int(i)
+                    print(currentPage)
+                time.sleep(0.05)
 
 
 if __name__ == '__main__':
