@@ -21,7 +21,7 @@ function imageToggler() {
     //wait before actually showing the next step
     setTimeout(imageToggler, time);
     //show the next step
-    document.querySelector('body').style.backgroundImage = `url('assets/images/${images[indexNum]}')`
+    document.querySelector('body').style.backgroundImage = `url('/static/assets/images/${images[indexNum]}')`
 }
 
 imageToggler()
