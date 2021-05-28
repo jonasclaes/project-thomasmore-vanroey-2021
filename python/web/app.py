@@ -8,7 +8,7 @@ socketio = SocketIO(app)
 
 @app.route("/page14")
 def hello_world():
-    return render_template("index.html")
+    return render_template("index_local.html")
 
 
 @app.route("/page1")
