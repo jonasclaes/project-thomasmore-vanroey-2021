@@ -1,4 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 * {
     padding: 0px;
@@ -7,7 +10,6 @@
 }
 
 html, body {
-    height: 100%;
     overflow: hidden;
 }
 
@@ -37,9 +39,17 @@ a:hover {
         max-width: 100vw;
         clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
     }
+    p{
+        font-size: 16px;
+    }
 }
 
+@media screen and (min-width: 576px){
+    p{
+        font-size: 22px;
+    }
 
+}
 @media screen and (min-width: 1200px) {
     #navbarstyle {
         background-color: rgba(255, 255, 255, 0.8);
@@ -49,7 +59,10 @@ a:hover {
         top: 0;
         margin-top: -2px;
     }
+    p{font-size: 25px ;}
 }
+
+
 
 .bannerimg img {
     position: relative;
@@ -103,11 +116,6 @@ svg {
     }
 }
 
-h1 {
-    color: white;
-}
-
-
 main {
     height: 90vh;
 }
@@ -136,4 +144,27 @@ footer a {
 
 
 
+
+h1  {
+    font-family: 'Staatliches', sans-serif;
+    border-bottom: #287abe solid 4px;
+    color: black;
+    border-right: none;
+    padding-right: 20px;
+    margin-top: 12px;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+h2{
+    font-family: 'Staatliches', sans-serif;
+    color: black;
+    padding-bottom:8px;
+}
+
+p{
+    font-family: 'Staatliches', sans-serif;
+    border-right: none;
+    padding-right: 3px;
+    display: inline-block;
+}
 

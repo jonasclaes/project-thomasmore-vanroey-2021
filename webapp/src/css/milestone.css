@@ -167,6 +167,7 @@ footer a{
 @media screen and (max-width: 576px){
     .slide {
         animation: none;
+        font-size: 16px;
     }
     .videost{
         height: auto;
@@ -176,6 +177,7 @@ footer a{
 @media screen and (max-width: 756px){
     .slide {
         animation: none;
+        font-size: 16px;
     }
     .videost{
         height: auto;
@@ -184,7 +186,7 @@ footer a{
 }
 @media screen and (min-width: 1024px){
     .slide{
-        font-size: 19px;
+        font-size: 20px;
     }
 }
 /*.heading{
