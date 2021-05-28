@@ -9,6 +9,7 @@ import socketio
 
 # Constants
 SLEEP_TIME_PRESS = 3    # Sleep time in seconds.
+INPUT_SENSITIVITY = 6   # Input sensitivity.
 
 
 def run_app():
@@ -74,7 +75,7 @@ def run_app():
 
     if hardware is not None:
         # Might not be needed. Just a sensitivity test.
-        hardware._mpr121[1].threshold = 6
+        hardware._mpr121[1].threshold = INPUT_SENSITIVITY
 
     current_page = 0
     sleep_time = (0.1 if General.is_raspberrypi() else 0)
@@ -89,6 +90,7 @@ def run_app():
                         sio.emit("change window", {'window': i})
                         current_page = i
 
+                    print(f"Input: {i}")
                     time.sleep(SLEEP_TIME_PRESS)
 
         if hardware is None:
