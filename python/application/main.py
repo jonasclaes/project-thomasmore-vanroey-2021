@@ -8,7 +8,7 @@ import socketio
 
 
 # Constants
-SLEEP_TIME_PRESS = 5    # Sleep time in seconds.
+SLEEP_TIME_PRESS = 3    # Sleep time in seconds.
 
 
 def run_app():
