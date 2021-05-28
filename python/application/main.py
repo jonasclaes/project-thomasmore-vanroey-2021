@@ -7,6 +7,10 @@ from modules.general import General
 import socketio
 
 
+# Constants
+SLEEP_TIME_PRESS = 5    # Sleep time in seconds.
+
+
 def run_app():
     # Log format according to ISO8601.
     # Example: 2021-05-21T21:37:13+0200
@@ -84,6 +88,8 @@ def run_app():
                     else:
                         sio.emit("change window", {'window': i})
                         current_page = i
+
+                    time.sleep(SLEEP_TIME_PRESS)
 
         if hardware is None:
             input_number = int(input("Input? [0-11]: "))
