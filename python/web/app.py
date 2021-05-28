@@ -11,7 +11,7 @@ def hello_world():
     return render_template("index_local.html")
 
 
-@app.route("/page5")
+@app.route("/page6")
 def page1():
     return render_template("Milestone1.html")
 
@@ -66,7 +66,7 @@ def page11():
     return render_template("Photo.html")
 
 
-@app.route("/page6")
+@app.route("/page5")
 def page12():
     return render_template("comingsoon.html")
 
