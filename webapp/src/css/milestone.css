@@ -189,3 +189,37 @@ footer a{
     animation: 1s ease-out 0s 1 slideInFromRight;
 }
  */
+
+@media screen and (min-width: 1200px) {
+    #navbarstyle {
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 999;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        margin-top: -2px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .bannerimg {
+        position: relative;
+        object-fit: cover;
+        max-width: 100vw;
+        clip-path: polygon(100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 0px) {
+    .bannerimg {
+        position: relative;
+        max-width: 100vw;
+        clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
+    }
+}
+
+main{
+    margin-top: 12vh;
+}
