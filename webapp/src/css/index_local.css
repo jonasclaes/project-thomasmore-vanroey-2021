@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div {
+    background-color: rgba(255,255,255,0.6);
+}
+
+h1 {
+    font-family: 'Staatliches', sans-serif;
+    color: #287abe;
+    font-size: 5rem;
+    line-height: 100vh;
+    text-align: center;
+
+}
+
+p {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    bottom: 35%;
+    font-family: 'Poppins', sans-serif;
+    color: #06A8FF;
+    font-size: 2rem;
+}
+
+.arrow{
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #287ABE;
+    border-right: 5px solid #287ABE;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+
+
+/*
+@keyframes fadeIn2 {
+    0% {
+        background-color: rgba(0,0,0,0.25);
+    }
+
+    1% {
+        background-color: rgba(0,0,0,0.25);
+    }
+
+    50% {
+        background-color: rgba(0,0,0,1);
+    }
+    100% {
+        background-color: rgba(0,0,0,0.25);
+    }
+}
+
+@-webkit-keyframes fadeIn2 {
+    0% {
+        background-color: rgba(0,0,0,0.25);
+    }
+
+    1% {
+        background-color: rgba(0,0,0,0.25);
+    }
+
+    50% {
+        background-color: rgba(0,0,0,1);
+    }
+}
+*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+#animate-area {
+    background-repeat: repeat-x;
+    animation: fadeIn 3s ease-in-out ;
+    overflow: hidden;   /*  hide scrollbars */
+    opacity: 1.0;
+    -webkit-transition: background 1.5s linear;
+    -moz-transition: background 1.5s linear;
+    -o-transition: background 1.5s linear;
+    transition: background 1.5s linear;
+}
+
