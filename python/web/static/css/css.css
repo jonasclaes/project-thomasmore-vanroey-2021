@@ -1,0 +1,139 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+nav {
+    margin-top: -2px;
+    padding-top: 2px;
+}
+
+a:hover {
+    color: #47d7ad;
+}
+
+@media screen and (min-width: 1200px) {
+    .bannerimg {
+        position: relative;
+        object-fit: cover;
+        max-width: 100vw;
+        clip-path: polygon(100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 0px) {
+    .bannerimg {
+        position: relative;
+        max-width: 100vw;
+        clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    #navbarstyle {
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 999;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        margin-top: -2px;
+    }
+}
+
+.bannerimg img {
+    position: relative;
+    top: 100px;
+}
+
+svg {
+    overflow: visible;
+    /*position: absolute;*/
+    /*top: 70vh;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%,-50%);*/
+}
+
+svg *:hover {
+    fill: rgba(40, 122, 190, .75);
+}
+
+a:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+a {
+    transition: all 0.1s;
+    transform-origin: 50% 50%;
+}
+
+.fa-home {
+    color: #287abe;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+svg {
+    overflow-y: visible;
+    max-height: 45vh;
+    width: auto;
+}
+
+#Default {
+    transform: rotate(90deg);
+}
+
+@media screen and (min-width: 576px) {
+    #Default {
+        transform: scale(1, -1);
+
+    }
+}
+
+h1 {
+    color: white;
+}
+
+
+main {
+    height: 90vh;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: -3px;
+    margin-bottom: -3px;
+}
+
+footer {
+    background: linear-gradient(90deg, rgba(1, 62, 142, 1) 0%, rgba(2, 78, 153, 1) 50%, rgba(1, 46, 113, 1) 1000%);
+    height: 28px;
+    width: 100%;
+    padding-bottom: 4.5px;
+}
+
+footer div {
+    color: #eee;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+
