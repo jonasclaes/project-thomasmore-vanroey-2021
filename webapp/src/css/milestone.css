@@ -1,7 +1,9 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-
+a:hover {
+    color: #47d7ad;
+}
 
 body {
     overflow-x: hidden;
@@ -221,5 +223,5 @@ footer a{
 }
 
 main{
-    margin-top: 12vh;
+    margin-top: 11vh;
 }

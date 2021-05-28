@@ -16,7 +16,9 @@ nav {
     padding-top: 2px;
 }
 
-
+a:hover {
+    color: #47d7ad;
+}
 
 @media screen and (min-width: 1200px) {
     .bannerimg {
