@@ -11,12 +11,12 @@ def hello_world():
     return render_template("index_local.html")
 
 
-@app.route("/page1")
+@app.route("/page5")
 def page1():
     return render_template("Milestone1.html")
 
 
-@app.route("/page2")
+@app.route("/page4")
 def page2():
     return render_template("Milestone2.html")
 
@@ -26,27 +26,27 @@ def page3():
     return render_template("Milestone3.html")
 
 
-@app.route("/page4")
+@app.route("/page2")
 def page4():
     return render_template("Milestone4.html")
 
 
-@app.route("/page5")
+@app.route("/page1")
 def page5():
     return render_template("Milestone5.html")
 
 
-@app.route("/page6")
+@app.route("/page12")
 def page6():
     return render_template("Milestone6.html")
 
 
-@app.route("/page7")
+@app.route("/page11")
 def page7():
     return render_template("Milestone7.html")
 
 
-@app.route("/page8")
+@app.route("/page10")
 def page8():
     return render_template("Milestone8.html")
 
@@ -56,17 +56,17 @@ def page9():
     return render_template("Milestone9.html")
 
 
-@app.route("/page10")
+@app.route("/page8")
 def page10():
     return render_template("Milestone10.html")
 
 
-@app.route("/page11")
+@app.route("/page7")
 def page11():
     return render_template("Photo.html")
 
 
-@app.route("/page12")
+@app.route("/page6")
 def page12():
     return render_template("comingsoon.html")
 
