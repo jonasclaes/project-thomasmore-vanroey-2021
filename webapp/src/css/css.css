@@ -22,6 +22,10 @@ a:hover {
     color: #47d7ad;
 }
 
+#milestoneBody {
+    padding-left: 5vw;
+}
+
 #qr {
     position: absolute;
     bottom: 40px;
@@ -169,7 +173,7 @@ h1  {
 h2{
     font-family: 'Staatliches', sans-serif;
     color: black;
-    padding-bottom:8px;
+    padding-bottom: 0px;
 }
 
 p{
