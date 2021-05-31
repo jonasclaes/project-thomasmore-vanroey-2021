@@ -8,8 +8,8 @@ import socketio
 
 
 # Constants
-SLEEP_TIME_PRESS = 3    # Sleep time in seconds.
-INPUT_SENSITIVITY = 6   # Input sensitivity.
+SLEEP_TIME_PRESS = 2    # Sleep time in seconds.
+INPUT_SENSITIVITY = 22   # Input sensitivity.
 
 
 def run_app():
